@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "贴吧签到小助手",
+    "version": "1.0",
+    "description": "百度贴吧自动一键签到、自动单吧签到，再也不会忘记签到了。登陆用户只要打开贴吧任何页面即可自动一键签到，对于7级以下的吧，无法一键签到，只要进入吧内就可以自动签到。",
+    "background": {
+        "scripts": [
+            
+        ]
+    },
+    "icons": {
+        "16": "images/sign16.png",
+        "48": "images/sign48.png",
+        "128": "images/sign128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://tieba.baidu.com/*"],
+            "js": ["js/content.js","js/jquery.js"]
+        }
+    ],
+    "permissions": [
+        
+        "http://tieba.baidu.com/"
+    ],
+    "web_accessible_resources": ["js/jquery.js","css/sign.css"]
+}
